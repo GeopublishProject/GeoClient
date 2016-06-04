@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.geopublish.geoclient" >
+
+    <uses-permission android:name="android.permission.INTERNET" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <permission
+        android:name="com.geopublish.geoclient.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.geopublish.geoclient.permission.C2D_MESSAGE" />
+
+    <application
+        android:name=".GeoclientApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon" >
+        <activity
+            android:name=".ui.MenuActivity"
+            android:label="Acercame"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name=".ui.RegisterUserActivity"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.mobility.RegisterUserStopActivity"
+            android:label="Indique su destino"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".ui.promos.PromosActivity"
+            android:label="Mis promociones"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.promos.PromoSubscriberActivity"
+            android:label="Agregar nueva promoción"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ui.promos.QRViewerActivity"
+            android:label="Mi promoción"
+            android:screenOrientation="portrait" >
+
+        </activity>
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.geopublish.geoclient.gcm.services" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".gcm.services.GcmListener"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.services.InstanceIDListener"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.services.RegistrationIntent"
+            android:exported="false" >
+        </service>
+
+        <activity
+            android:name=".ui.mobility.UserDestinationRouteActivity"
+            android:label="@string/title_activity_user_destination_route" >
+        </activity>
+    </application>
+
+</manifest>

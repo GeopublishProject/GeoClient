@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mapa"   >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"   >
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/logo_acercame_wide"
+                android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FCBB22"
+                    android:textStyle="bold"
+                    android:textSize="24dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="ERES NUEVO USUARIO"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola!, te damos la bienvenida al sistema Geopublish. Ingresa los siguientes datos y empieza a disfrutarla! "/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Nombre:"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/text_padding"
+                    android:paddingLeft="5dp"
+                    android:textSize="16sp"
+                    android:paddingBottom="@dimen/text_padding"
+                    android:background="@drawable/spinner"
+                    android:id="@+id/txtName"
+                    android:maxLength="75"
+                    android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Fecha de nacimiento:"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/text_padding"
+                        android:textSize="16sp"
+                        android:paddingBottom="@dimen/text_padding"
+                        android:background="@drawable/spinner"
+                        android:id="@+id/txtDay"
+                        android:paddingLeft="5dp"
+                        android:hint="dd"
+                        android:maxLength="2"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="/"/>
+
+                    <EditText
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/text_padding"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:paddingBottom="@dimen/text_padding"
+                        android:hint="mm"
+                        android:background="@drawable/spinner"
+                        android:id="@+id/txtMonth"
+                        android:maxLength="2"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="/"/>
+
+                    <EditText
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/text_padding"
+                        android:paddingLeft="5dp"
+                        android:textSize="16sp"
+                        android:paddingBottom="@dimen/text_padding"
+                        android:hint="aaaa"
+                        android:background="@drawable/spinner"
+                        android:id="@+id/txtYear"
+                        android:maxLength="4"
+                        android:inputType="number" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="Ocupación"/>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+
+                    <Spinner
+                        android:id="@+id/ddlOccupations"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/spinner"
+                        android:entries="@array/occupations"
+                        android:spinnerMode="dropdown"
+                        android:paddingTop="@dimen/text_padding"
+                        android:paddingBottom="@dimen/text_padding"
+                        android:textSize="16sp"
+                        android:textColor="#404040" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@drawable/drop_down"
+                        android:contentDescription="@string/app_name" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_weight="0" >
+
+            <Button
+                android:id="@+id/btnRegisterUser"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_ok"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:text="ENVIAR"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</ScrollView >
+
+

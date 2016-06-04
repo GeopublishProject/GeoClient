@@ -1,0 +1,58 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/mapa"
+    tools:context="com.geopublish.geoclient.ui.promos.PromosActivity">
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listView"
+        android:divider="@android:color/transparent"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:layout_margin="10dp"
+        android:dividerHeight="10.0sp"
+        />
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/emptyElement"
+        android:text="No estás suscrito a ninguna promoción. Si quieres suscribirte a una promoción haz click en el botón (+) e introduce el código."
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/darker_gray"/>
+
+    <com.software.shell.fab.ActionButton
+        android:id="@+id/btnShowPromoSubscriber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        fab:type="DEFAULT"
+        fab:button_color="#2E7D32"
+        fab:button_colorPressed="#66BB6A"
+        fab:image="@drawable/fab_plus_icon"
+        fab:image_size="24dp"
+        fab:shadow_color="#757575"
+        fab:shadow_radius="1.0dp"
+        fab:shadow_xOffset="0.5dp"
+        fab:shadow_yOffset="1.0dp"
+        fab:button_colorRipple="#43A047"
+        fab:rippleEffect_enabled="true"
+        fab:shadowResponsiveEffect_enabled="true"
+        fab:show_animation="@anim/fab_roll_from_down"
+        fab:hide_animation="@anim/fab_roll_to_down"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        />
+</RelativeLayout>

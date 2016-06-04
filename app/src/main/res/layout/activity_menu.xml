@@ -1,0 +1,80 @@
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mapa">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_acercame"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerInside"
+                android:id="@+id/imageView" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="#2E7D32"
+                >
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:padding="20dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/btnMobility"
+                    android:layout_width="134dp"
+                    android:layout_height="132dp"
+                    android:src="@drawable/button_alertme"
+                    android:onClick="onShowMobilityActivity"
+                    android:layout_marginRight="10dp" />
+
+                <ImageButton
+                    android:id="@+id/btnShowPromos"
+                    android:layout_width="134dp"
+                    android:layout_height="132dp"
+                    android:src="@drawable/button_promotions"
+                    android:onClick="onShowPromosActivity"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+  </RelativeLayout>
+
+

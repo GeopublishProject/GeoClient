@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:theme="@style/NoTitleDialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Selecciona el color que deseas para tu llamada"
+        android:paddingBottom="10dp" />
+
+    <uz.shift.colorpicker.LineColorPicker
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/picker"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:orientation="horizontal"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+               <Button
+                android:id="@+id/btnSetColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_ok"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                   android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:text="OK"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

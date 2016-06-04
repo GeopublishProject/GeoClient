@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Acercame</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string-array name="lines">
+        <item>Calle</item>
+        <item>Carrera</item>
+        <item>Diagonal</item>
+        <item>Transversal</item>
+    </string-array>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
+
+    <string-array name="occupations">
+        <item>Empleado</item>
+        <item>No labora</item>
+        <item>Estudiante</item>
+    </string-array>
+    <string name="title_activity_ipregister">IPRegister</string>
+    <string name="title_activity_promos">Promos</string>
+    <string name="title_activity_promo_subscriber">PromoSubscriber</string>
+    <string name="title_activity_promo_viewer">PromoViewer</string>
+    <string name="title_activity_qrviewer">QRViewer</string>
+    <string name="title_activity_ec">ECActivity</string>
+    <string name="title_activity_expand_collapse">ExpandCollapseActivity</string>
+    <string name="title_activity_user_destination_route">Tu mapa</string>
+
+</resources>
