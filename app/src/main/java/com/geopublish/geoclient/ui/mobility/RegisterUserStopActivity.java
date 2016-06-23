@@ -77,7 +77,7 @@ public class RegisterUserStopActivity extends ActionBarActivity {
 
         barProgressDialog.setTitle("Acércame ...");
         barProgressDialog.setMessage("Estamos procesando tu solicitud ...");
-        barProgressDialog.setProgressStyle( ProgressDialog.STYLE_HORIZONTAL);
+        barProgressDialog.setProgressStyle( ProgressDialog.STYLE_SPINNER);
         barProgressDialog.setIndeterminate(true);
         barProgressDialog.setCancelable(false);
 
